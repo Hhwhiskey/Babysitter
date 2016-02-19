@@ -36,4 +36,11 @@ public class BabysitterTest {
         assertEquals(16, result);
     }
 
+    @Test
+    public void testShiftLengthMax() {
+        int result = babysitter.getShiftLengthMax();
+        assertEquals(11, result);
+    }
+
+
 }
