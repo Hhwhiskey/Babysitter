@@ -42,5 +42,9 @@ public class BabysitterTest {
         assertEquals(11, result);
     }
 
-
+    @Test
+    public void testShiftLengthMin() {
+        int result = babysitter.getShiftLengthMin();
+        assertEquals(1, result);
+    }
 }
