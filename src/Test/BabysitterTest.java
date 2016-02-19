@@ -30,5 +30,10 @@ public class BabysitterTest {
         assertEquals(8, result);
     }
 
+    @Test
+    public void testLateRate() {
+        int result = babysitter.getLateRate();
+        assertEquals(16, result);
+    }
 
 }
