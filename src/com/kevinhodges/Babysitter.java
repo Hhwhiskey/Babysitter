@@ -1,6 +1,7 @@
 package com.kevinhodges;
 
 import java.text.SimpleDateFormat;
+import java.util.concurrent.TimeUnit;
 
 public class Babysitter {
 
@@ -17,7 +18,8 @@ public class Babysitter {
 
     public int calculateShiftLength(long startingTime, long quittingTime) {
 
-        int shiftLengthHours = 0;
+        long shiftLength = quittingTime - startingTime;
+        int shiftLengthHours = (int) TimeUnit.MILLISECONDS.toHours(shiftLength);
 
         return shiftLengthHours;
     }
