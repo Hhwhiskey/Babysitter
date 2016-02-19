@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat;
 
 public class Babysitter {
 
-    int dayRate;
+    int dayRate = 12;
     int nightRate;
     int lateRate;
     int shiftLengthMax;
