@@ -57,19 +57,23 @@ public class BabysitterTest {
     @Test
     public void testCalculateShiftLength() {
 
-        // Pass in shift start time of 1700 on feb 19th
+        // We expect this test to return a shift length of 11 hours
+
+        // Set calendar object to time of 1700 on feb 19th
         Calendar shiftStartDate = Calendar.getInstance();
-        shiftStartDate.set(2016, 2, 19, 17, 0, 0);
-        long shiftStartTime = shiftStartDate.getTimeInMillis();
+        shiftStartDate.set(Calendar.YEAR, 2016);
+        shiftStartDate.set(Calendar.MONTH, 2);
+        shiftStartDate.set(Calendar.DATE, 19);
+        shiftStartDate.set(Calendar.HOUR_OF_DAY, 17);
 
-        // Pass in shift end time of 0400 on feb 20th
+        // Set calendar object to time of 0400 on feb 20th
         Calendar shiftEndDate = Calendar.getInstance();
-        shiftEndDate.set(2016, 2, 20, 04, 0, 0);
-        long shiftEndTime = shiftEndDate.getTimeInMillis();
+        shiftEndDate.set(Calendar.YEAR, 2016);
+        shiftEndDate.set(Calendar.MONTH, 2);
+        shiftEndDate.set(Calendar.DATE, 20);
+        shiftEndDate.set(Calendar.HOUR_OF_DAY, 4);
 
-        // We expect this situation to return a shift length of 11 hours
-        // the max shift length
-        int result = babysitter.calculateShiftLength(shiftStartTime, shiftEndTime);
+        int result = babysitter.calculateShiftLength(shiftStartDate, shiftEndDate);
         assertEquals(11, result);
     }
 }
