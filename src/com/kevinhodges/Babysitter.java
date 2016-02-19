@@ -8,7 +8,7 @@ public class Babysitter {
     int nightRate = 8;
     int lateRate = 16;
     int shiftLengthMax = 11;
-    int shiftLengthMin;
+    int shiftLengthMin = 1;
     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH");
 
     public static void main(String[] args) {
